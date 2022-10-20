@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<title>Ejemplo web api-ZF17004</title>
+	<meta charset="utf-8"  />
+<LINK REL=StyleSheet HREF="estilo.css" TYPE="text/css" MEDIA=screen>
+<script src="codigo.js"></script>
+
+</head>
+
+<body >
+ <h1>Ejercicio web api</h1>
+     <h5>Nombre: Zelaya Fuentes Rodrigo Eduardo
+	 </h5>
+	 <h5> Carnet:ZP17004</h5>
+	 <h5> GL: 03  </h5>
+
+	 <!--inicio del div-->
+	 <div class="formulario">
+		<form>
+			<label for="fname">Titulo:</label><br>
+  			<input type="text" id="txtTitulo" name="titulo"><br>
+  			<label for="lname">Precio:</label><br>
+ 			<input type="text" id="txtPrecio" name="precio"><br>
+			<label for="lname">Descripción:</label><br>
+ 			<input type="text" id="txtDescripcion" name="descripcion"><br>
+			<label for="lname">Imagen:</label><br>
+ 			<input type="text" id="txtImagen" name="imagen"><br>
+			<label for="lname">Categoría</label><br>
+ 			<input type="text" id="txtCategoria" name="categoria"><br>
+			 
+  			
+  			<br>
+		</form><button class="boton" onclick="agregarProducto()">Guardar</button>
+	</div>
+	 <!--fin del div-->
+	 <div class="caja">
+		<p><button class="boton" onclick="obtenerProductos();this.style.display='none';">Obtener Productos</button></p>
+   </div>
+	 <div id="listado" style="display:none;">
+	 <form name="filtroprods" id="filtroprods">
+	   Seleccione Categorias 
+	   <input type="checkbox" id="c1" value="c1" checked>Electronicos
+	 <input type="checkbox" id="c2" value="c2" checked>Joyería
+   <input type="checkbox" id="c3" value="c3" checked>Ropa Caballero
+   <input type="checkbox" id="c4" value="c4" checked>Ropa Dama
+   <ol><li>Click en la imagen para Acercamiento</li>
+   <li>Click en precio para ordenar Asc o Desc</li></ol>
+     <table id="tabla" border="1">
+	 <thead>
+	 <tr><th>id</th><th>foto</th><th  id="price">price</th>
+	 <th>title</th><th>description</th><th>category</th><th>Acción</th></tr>
+	 </thead>
+	 <tbody id="tbody"></tbody>
+	 </table>
+	 </form>
+	 </div>
+	
+     
+</body>
+</html>
